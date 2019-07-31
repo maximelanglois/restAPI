@@ -31,9 +31,6 @@ namespace restapi
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<CommandContext>
-                (opt => opt.UseMySql(Configuration["data:CommandAPIconnection:ConnectionString"]));
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<elevatorContext>
                 (opt => opt.UseMySql(Configuration["data:WillAPIconnection:ConnectionString"]));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
