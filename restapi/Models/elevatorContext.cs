@@ -8,7 +8,7 @@ namespace restapi.Models
         {
 
         }
-        public DbSet<elevator> columns {get; set;}
+        public DbSet<elevator> elevators {get; set;}
 
     }
 }

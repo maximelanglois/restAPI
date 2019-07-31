@@ -20,3 +20,9 @@ C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\
 C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\obj\Debug\netcoreapp2.2\restapi.AssemblyInfo.cs
 C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\obj\Debug\netcoreapp2.2\restapi.dll
 C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\obj\Debug\netcoreapp2.2\restapi.pdb
+C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\bin\Debug\netcoreapp2.2\restapi.deps.json
+C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\bin\Debug\netcoreapp2.2\restapi.runtimeconfig.json
+C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\bin\Debug\netcoreapp2.2\restapi.runtimeconfig.dev.json
+C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\bin\Debug\netcoreapp2.2\restapi.dll
+C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\bin\Debug\netcoreapp2.2\restapi.pdb
+C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\obj\Debug\netcoreapp2.2\restapi.RazorTargetAssemblyInfo.cache
