@@ -12160,11 +12160,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\CodeBoxx\\restAPI\\restAPI\\restapi.csproj",
       "projectName": "restapi",
       "projectPath": "D:\\CodeBoxx\\restAPI\\restAPI\\restapi.csproj",
       "packagesPath": "C:\\Users\\mathi\\.nuget\\packages\\",
       "outputPath": "D:\\CodeBoxx\\restAPI\\restAPI\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\William\\Documents\\codeboxx\\odyssey\\semaine_8_dotnetAPI\\restAPI\\restapi\\restapi.csproj",
+      "projectName": "restapi",
+      "projectPath": "C:\\Users\\William\\Documents\\codeboxx\\odyssey\\semaine_8_dotnetAPI\\restAPI\\restapi\\restapi.csproj",
+      "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\William\\Documents\\codeboxx\\odyssey\\semaine_8_dotnetAPI\\restAPI\\restapi\\obj\\",
+>>>>>>> master
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
