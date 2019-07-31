@@ -32,11 +32,11 @@ namespace restapi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<batteryContext>
-                (opt => opt.UseMySql(Configuration["data:maximeAPIconnection:ConnectionString"]));
+                (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
             services.AddDbContext<columnContext>
-                (opt => opt.UseMySql(Configuration["data:MathieuAPIconnection:ConnectionString"]));
+                (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
             services.AddDbContext<elevatorContext>
-                (opt => opt.UseMySql(Configuration["data:WillAPIconnection:ConnectionString"]));
+                (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
