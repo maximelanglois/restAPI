@@ -33,6 +33,8 @@ namespace restapi
         {
             services.AddDbContext<CommandContext>
                 (opt => opt.UseMySql(Configuration["data:CommandAPIconnection:ConnectionString"]));
+            services.AddDbContext<columnContext>
+                (opt => opt.UseMySql(Configuration["data:MathieuAPIconnection:ConnectionString"]));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
