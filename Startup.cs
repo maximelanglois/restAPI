@@ -37,6 +37,8 @@ namespace restapi
                 (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
             services.AddDbContext<elevatorContext>
                 (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
+            services.AddDbContext<leadContext>
+                (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
             services.AddDbContext<customerContext>
                 (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
 

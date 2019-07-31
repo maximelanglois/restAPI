@@ -19,11 +19,17 @@ namespace restapi.Controllers
             return _context.elevators;
         }
 
-        // [HttpGet]
-        // public ActionResult<IEnumerable<string>> GetString()
-        // {
-            // return new string[] {"this", "is", "hard", "coded"};
-        // }
+        [HttpGet("{id}")]
+        public ActionResult<elevator> GetElevators(int id)
+        {
+            var elevator = _context.elevators.Find(id);
+            
+            if (elevator == null)
+            {
+                return NotFound();
+            }
+            return elevator;
+        }
     }
 
 }
