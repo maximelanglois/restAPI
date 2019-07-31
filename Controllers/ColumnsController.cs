@@ -19,11 +19,17 @@ namespace restapi.Controllers
             return _context.columns;
         }
 
-        // [HttpGet]
-        // public ActionResult<IEnumerable<string>> GetString()
-        // {
-            // return new string[] {"this", "is", "hard", "coded"};
-        // }
+        [HttpGet("{id}")]
+        public ActionResult<column> GetColumns(int id)
+        {
+            var column = _context.columns.Find(id);
+            
+            if (column == null)
+            {
+                return NotFound();
+            }
+            return column;
+        }
     }
 
 }

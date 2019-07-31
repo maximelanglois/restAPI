@@ -18,6 +18,17 @@ namespace restapi.Controllers
         {
             return _context.leads;
         }
+        [HttpGet("{id}")]
+        public ActionResult<lead> GetLeads(int id)
+        {
+            var lead = _context.leads.Find(id);
+            
+            if (lead == null)
+            {
+                return NotFound();
+            }
+            return lead;
+        }
     
     }
 
