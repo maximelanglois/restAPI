@@ -34,6 +34,9 @@ namespace restapi
             services.AddDbContext<CommandContext>
                 (opt => opt.UseMySql(Configuration["data:CommandAPIconnection:ConnectionString"]));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddDbContext<elevatorContext>
+                (opt => opt.UseMySql(Configuration["data:WillAPIconnection:ConnectionString"]));
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

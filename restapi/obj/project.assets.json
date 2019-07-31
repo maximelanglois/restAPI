@@ -12161,11 +12161,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\William\\Documents\\codeboxx\\odyssey\\semaine_8_dotnetAPI\\api\\restapi\\restapi.csproj",
+      "projectUniqueName": "C:\\Users\\William\\Documents\\codeboxx\\odyssey\\semaine_8_dotnetAPI\\restAPI\\restapi\\restapi.csproj",
       "projectName": "restapi",
-      "projectPath": "C:\\Users\\William\\Documents\\codeboxx\\odyssey\\semaine_8_dotnetAPI\\api\\restapi\\restapi.csproj",
+      "projectPath": "C:\\Users\\William\\Documents\\codeboxx\\odyssey\\semaine_8_dotnetAPI\\restAPI\\restapi\\restapi.csproj",
       "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\William\\Documents\\codeboxx\\odyssey\\semaine_8_dotnetAPI\\api\\restapi\\obj\\",
+      "outputPath": "C:\\Users\\William\\Documents\\codeboxx\\odyssey\\semaine_8_dotnetAPI\\restAPI\\restapi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

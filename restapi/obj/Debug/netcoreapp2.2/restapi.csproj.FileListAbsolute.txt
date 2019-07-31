@@ -12,3 +12,11 @@ C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\api\restapi\obj\
 C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\api\restapi\obj\Debug\netcoreapp2.2\restapi.RazorTargetAssemblyInfo.cache
 C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\api\restapi\obj\Debug\netcoreapp2.2\restapi.dll
 C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\api\restapi\obj\Debug\netcoreapp2.2\restapi.pdb
+C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\obj\Debug\netcoreapp2.2\restapi.csprojAssemblyReference.cache
+C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\obj\Debug\netcoreapp2.2\restapi.csproj.CoreCompileInputs.cache
+C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\obj\Debug\netcoreapp2.2\restapi.RazorAssemblyInfo.cache
+C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\obj\Debug\netcoreapp2.2\restapi.RazorAssemblyInfo.cs
+C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\obj\Debug\netcoreapp2.2\restapi.AssemblyInfoInputs.cache
+C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\obj\Debug\netcoreapp2.2\restapi.AssemblyInfo.cs
+C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\obj\Debug\netcoreapp2.2\restapi.dll
+C:\Users\William\Documents\codeboxx\odyssey\semaine_8_dotnetAPI\restAPI\restapi\obj\Debug\netcoreapp2.2\restapi.pdb
