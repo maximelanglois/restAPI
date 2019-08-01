@@ -43,9 +43,9 @@ namespace restapi.Controllers
             var buildWithinactive = new List<building>();
             var rawBuildingIdList = new List<int>();
 
-            var inactiveBatteries =_context.batteries.Where(b => b.status != "active");
-            var inactiveColumns =_context.columns.Where(c => c.status != "active");
-            var inactiveElevators =_context.elevators.Where(e => e.status != "active");
+            var inactiveBatteries =_context.batteries.Where(b => b.status == "intervention");
+            var inactiveColumns =_context.columns.Where(c => c.status == "intervention");
+            var inactiveElevators =_context.elevators.Where(e => e.status == "intervention");
     
             // Get Building Id from inactive batteries
 
