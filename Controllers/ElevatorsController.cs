@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using restapi.Models;
+using System.Linq;
+
 
 namespace restapi.Controllers
 {
@@ -45,14 +47,17 @@ namespace restapi.Controllers
 
 //-------------------------------------------- TEST --------------------------------------------------
         [HttpGet("inactive")]
-        public ActionResult<IEnumerable<elevator>> GetsInactiveElevator()
+        public ActionResult<IEnumerable<elevator>> GetInactiveElevators()
         {
-           var elevators = _context.elevators;
-           if (elevators == null)
-           {
-               return NotFound();
-           }
-           return elevators;
+            var inactiveElevators = _context.elevators.Where(e => (e.status != "active")).ToList();
+
+            
+            if (inactiveElevators == null)
+            {
+                return NotFound();
+            }
+            
+            return inactiveElevators;
         }
         
     }
