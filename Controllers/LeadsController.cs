@@ -36,24 +36,23 @@ namespace restapi.Controllers
         public ActionResult<IEnumerable<lead>> CheckLeadsCustomers(int id)
         {
             var leadsNotCustomers = new List<lead>();
-            var currentDate = DateTime.Now;
             DateTime nowMinus30Days = DateTime.Now.AddDays(-30);
             var recentLeads =_context.leads.Where(l => l.creation_date > nowMinus30Days);
 
-            var leadIsCustomers =
+            var leadIsNotCustomers =
                             from l in recentLeads
-                            where (from c in _context.customers
+                            where !(from c in _context.customers
                             select c.email_contact)
                             .Contains(l.email)
                             select l;
                 
             
 
-            if (leadIsCustomers == null)
+            if (leadIsNotCustomers == null)
             {
                 return NotFound();
             }
-            return leadsNotCustomers;
+            return leadIsNotCustomers.ToList();
         }
     
     }
