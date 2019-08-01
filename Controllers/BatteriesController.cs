@@ -8,8 +8,8 @@ namespace restapi.Controllers
     [ApiController]
     public class BatteriesController : ControllerBase
     {
-        private readonly batteryContext _context;
-        public BatteriesController(batteryContext context) => _context = context;
+        private readonly mySQLContext _context;
+        public BatteriesController(mySQLContext context) => _context = context;
 
         //GET:          api/commands
         [HttpGet]

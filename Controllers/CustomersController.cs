@@ -8,9 +8,9 @@ namespace restapi.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
-        private readonly customerContext _context;
+        private readonly mySQLContext _context;
 
-        public CustomersController(customerContext context) => _context = context;
+        public CustomersController(mySQLContext context) => _context = context;
 
         //Get:              api/customers
         [HttpGet]
@@ -19,11 +19,17 @@ namespace restapi.Controllers
             return _context.customers;
         }
 
-        // [HttpGet]
-        // public ActionResult<IEnumerable<string>> GetString()
-        // {
-            // return new string[] {"this", "is", "hard", "coded"};
-        // }
+        [HttpGet("{id}")]
+        public ActionResult<customer> GetCustomers(int id)
+        {
+            var customer = _context.customers.Find(id);
+            
+            if (customer == null)
+            {
+                return NotFound();
+            }
+            return customer;
+        }
     }
 
 }

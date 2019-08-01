@@ -8,15 +8,26 @@ namespace restapi.Controllers
     [ApiController]
     public class LeadsController : ControllerBase
     {
-        private readonly leadContext _context;
+        private readonly mySQLContext _context;
 
-        public LeadsController(leadContext context) => _context = context;
+        public LeadsController(mySQLContext context) => _context = context;
 
         //GET:          api/commands
         [HttpGet]
         public ActionResult<IEnumerable<lead>> GetCommands()
         {
             return _context.leads;
+        }
+        [HttpGet("{id}")]
+        public ActionResult<lead> GetLeads(int id)
+        {
+            var lead = _context.leads.Find(id);
+            
+            if (lead == null)
+            {
+                return NotFound();
+            }
+            return lead;
         }
     
     }
