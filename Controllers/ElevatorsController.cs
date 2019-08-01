@@ -30,6 +30,31 @@ namespace restapi.Controllers
             }
             return elevator;
         }
+
+        [HttpGet("{id}/status")]
+        public ActionResult<string> GetElevatorsStatus(int id)
+        {
+           var elevatorStatus = _context.elevators.Find(id).status;
+           if (elevatorStatus == null)
+           {
+               return NotFound();
+           }
+           return elevatorStatus;
+        }
+
+
+//-------------------------------------------- TEST --------------------------------------------------
+        [HttpGet("inactive")]
+        public ActionResult<IEnumerable<elevator>> GetsInactiveElevator()
+        {
+           var elevators = _context.elevators;
+           if (elevators == null)
+           {
+               return NotFound();
+           }
+           return elevators;
+        }
+        
     }
 
 }
