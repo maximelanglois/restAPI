@@ -41,6 +41,8 @@ namespace restapi
                 (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
             services.AddDbContext<customerContext>
                 (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
+            services.AddDbContext<buildingContext>
+                (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));    
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
