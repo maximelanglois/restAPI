@@ -43,32 +43,57 @@ namespace restapi.Controllers
             var buildWithinactive = new List<building>();
 
             var buildingIdList = new List<int>();
-            var inactiveBatteries =_context.batteries.Where(b => (b.status != "active"));
-            var inactiveColumns =_context.columns.Where(c => (c.status != "active"));
-            var inactiveColumnsIds = inactiveColumns.Select(c => c.id).ToArray();
-            var inactiveElevators =_context.elevators.Where(e => e.status != "active" && !inactiveColumnsIds.Contains(e.column_id));
+            var inactiveBatteries =_context.batteries.Where(b => b.status != "active");
+            var inactiveColumns =_context.columns.Where(c => c.status != "active");
+            // var inactiveColumnsIds = inactiveColumns.Select(c => c.id).ToArray();
+            // var inactiveElevators =_context.elevators.Where(e => e.status != "active" && !inactiveColumnsIds.Contains(e.column_id));
+            
+            var inactiveElevators =_context.elevators.Where(e => e.status != "active");
+    
+            // Get Building Id from inactive batteries
 
             foreach (var b in inactiveBatteries)
             {
                 var build_id = b.building_id;
                 buildingIdList.Add(build_id);
-            }
-
-           
+            }   
             
+            // Get Building Id from inactive columns
+
             var temp_col_build_id =  from battery in _context.batteries
-                                join column in inactiveColumns on battery.id equals column.battery_id into gj
-                                from subCol in gj.DefaultIfEmpty()
-                                select new {battery.id, columnId = subCol.id};
+                                     join c in inactiveColumns on battery.id equals c.battery_id into gj
+                                     from subCol in gj
+                                     select battery.building_id;
 
             var col_build_id_list = temp_col_build_id.ToList();
 
             buildingIdList.AddRange(col_build_id_list);
-                
+
+            // Get Building Id from inactive elevators
+
+            var temp_elev_bat_id =  from column in _context.columns
+                                    join e in inactiveElevators on column.id equals e.column_id into gj
+                                    from subElev in gj
+                                    select column.battery_id;
+
+                        //var elev_bat_id = temp_elev_bat_id.ToList();
+
+            
+            var temp_elev_build_id = from battery in _context.batteries
+                                     join c in inactiveColumns on battery.id equals c.battery_id into gj
+                                     from subCol in gj
+                                     select battery.building_id;
+
+
+
+
+            var elev_build_id_list = temp_elev_build_id.ToList();
+
+            buildingIdList.AddRange(elev_build_id_list);              
             
 
 
-
+            // Get Inactive building list from bulding ids
 
             foreach (var id in buildingIdList)
             {
