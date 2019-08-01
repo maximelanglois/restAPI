@@ -18,13 +18,28 @@ namespace restapi.Controllers
             return _context.batteries;
         }
         
-        /*              TEST
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> GetString()
+        [HttpGet("{id}")]
+        public ActionResult<battery> GetBatteries(int id)
         {
-            return new string[] {"This", "is", "a", "nice", "API"};
+            var battery = _context.batteries.Find(id);
+            
+            if (battery == null)
+            {
+                return NotFound();
+            }
+            return battery;
         }
-        */
+
+        [HttpGet("{id}/status")]
+        public ActionResult<string> GetBatteryStatus(int id)
+        {
+           var batteryStatus = _context.batteries.Find(id).status;
+           if (batteryStatus == null)
+           {
+               return NotFound();
+           }
+           return batteryStatus;
+        }
     }
 
 }
