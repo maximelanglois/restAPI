@@ -8,9 +8,9 @@ namespace restapi.Controllers
     [ApiController]
     public class LeadsController : ControllerBase
     {
-        private readonly leadContext _context;
+        private readonly mySQLContext _context;
 
-        public LeadsController(leadContext context) => _context = context;
+        public LeadsController(mySQLContext context) => _context = context;
 
         //GET:          api/commands
         [HttpGet]

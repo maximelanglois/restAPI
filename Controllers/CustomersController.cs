@@ -8,9 +8,9 @@ namespace restapi.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
-        private readonly customerContext _context;
+        private readonly mySQLContext _context;
 
-        public CustomersController(customerContext context) => _context = context;
+        public CustomersController(mySQLContext context) => _context = context;
 
         //Get:              api/customers
         [HttpGet]

@@ -31,17 +31,17 @@ namespace restapi
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<batteryContext>
-                (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
-            services.AddDbContext<columnContext>
-                (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
-            services.AddDbContext<elevatorContext>
-                (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
-            services.AddDbContext<leadContext>
-                (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
-            services.AddDbContext<customerContext>
-                (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
-            services.AddDbContext<buildingContext>
+            // services.AddDbContext<batteryContext>
+                // (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
+            // services.AddDbContext<columnContext>
+                // (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
+            // services.AddDbContext<elevatorContext>
+                // (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
+            // services.AddDbContext<leadContext>
+                // (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
+            // services.AddDbContext<customerContext>
+                // (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));
+            services.AddDbContext<mySQLContext>
                 (opt => opt.UseMySql(Configuration["data:APIconnection:ConnectionString"]));    
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

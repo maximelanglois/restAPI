@@ -9,9 +9,9 @@ namespace restapi.Controllers
     [ApiController]
     public class ColumnsController : ControllerBase
     {
-        private readonly columnContext _context;
+        private readonly mySQLContext _context;
 
-        public ColumnsController(columnContext context) => _context = context;
+        public ColumnsController(mySQLContext context) => _context = context;
 
         //Get:              api/columns
         [HttpGet]

@@ -8,9 +8,9 @@ namespace restapi.Controllers
     [ApiController]
     public class ElevatorsController : ControllerBase
     {
-        private readonly elevatorContext _context;
+        private readonly mySQLContext _context;
 
-        public ElevatorsController(elevatorContext context) => _context = context;
+        public ElevatorsController(mySQLContext context) => _context = context;
 
         //Get:              api/elevators
         [HttpGet]
