@@ -35,25 +35,11 @@ namespace restapi.Controllers
             return column;
         }
 
-        [HttpGet("{id}/status")]
-        public ActionResult<string> GetColumnStatus(int id)
-        {
-            var columnStatus = _context.columns.Find(id).status;
-            
-            if (columnStatus == null)
-            {
-                return NotFound();
-            }
-            
-            return columnStatus;
-        }
-
         [HttpGet("inactive")]
         public ActionResult<IEnumerable<column>> GetInactiveColumns()
         {
             var inactiveColumns = _context.columns.Where(c => (c.status != "active")).ToList();
-
-            
+     
             if (inactiveColumns == null)
             {
                 return NotFound();
@@ -62,8 +48,24 @@ namespace restapi.Controllers
             return inactiveColumns;
         }
 
-      
+        [HttpGet("{id}/status")]
+        public ActionResult<string> GetColumnStatus(int id)
+        {
+            var columnStatus = _context.columns.Find(id).status;       
+            if (columnStatus == null)
+            {
+                return NotFound();
+            }           
+            return "Status is : '" + columnStatus + "' on column ID : " + id ;
+        }
 
+        [HttpPut("{id}/status")]
+        public string PutStatus(int id,[FromBody] string status)
+        {            
+            var column = _context.columns.Find(id);
+            column.status = status;
+            _context.SaveChanges();
+            return "Status changed to : '" + status + "' on column ID : " + id ;
+        }        
     }
-
 }
