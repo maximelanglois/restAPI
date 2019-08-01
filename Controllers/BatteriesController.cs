@@ -1,6 +1,10 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using restapi.Models;
+using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace restapi.Controllers
 {
@@ -40,6 +44,17 @@ namespace restapi.Controllers
            }
            return batteryStatus;
         }
+
+
+        [HttpPut("{id}/status")]
+        public string Put1(int id,[FromBody] string status)
+        {            
+            var battery = _context.batteries.Find(id);
+            battery.status = status;
+            _context.SaveChanges();
+            return "Status changed to : '" + status + "' on battery ID : " + id ;
+        }
+
     }
 
 }
