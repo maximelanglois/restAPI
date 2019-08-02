@@ -50,7 +50,7 @@ namespace restapi
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                await context.Response.WriteAsync("I'm on Azure, but this URL does'nt exist!");
             });
         }
     }
