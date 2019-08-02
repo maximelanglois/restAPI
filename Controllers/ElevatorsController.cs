@@ -53,7 +53,7 @@ namespace restapi.Controllers
            {
                return NotFound();
            }
-           return elevatorStatus;
+           return "Status is : '" + elevatorStatus + "' on elevator ID : " + id ;
         }
       
         [HttpPut("{id}/status")]

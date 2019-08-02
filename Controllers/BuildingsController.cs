@@ -36,7 +36,7 @@ namespace restapi.Controllers
             return building;
         }
 
-        [HttpGet("inactive")]
+        [HttpGet("intervention")]
 
         public ActionResult<IEnumerable<building>> GetBuildingWithInactive()
         {
