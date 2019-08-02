@@ -34,6 +34,9 @@ namespace restapi.Controllers
             return battery;
         }
 
+
+
+
         [HttpGet("{id}/status")]
         public ActionResult<string> GetBatteryStatus(int id)
         {
@@ -42,19 +45,16 @@ namespace restapi.Controllers
            {
                return NotFound();
            }
-           return batteryStatus;
+           return "Status is : '" + batteryStatus + "' on battery ID : " + id ;
         }
 
-
         [HttpPut("{id}/status")]
-        public string Put1(int id,[FromBody] string status)
+        public string PutStatus(int id,[FromBody] string status)
         {            
             var battery = _context.batteries.Find(id);
             battery.status = status;
             _context.SaveChanges();
             return "Status changed to : '" + status + "' on battery ID : " + id ;
         }
-
     }
-
 }

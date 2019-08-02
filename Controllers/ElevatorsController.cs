@@ -33,6 +33,18 @@ namespace restapi.Controllers
             return elevator;
         }
 
+
+        [HttpGet("inactive")]
+        public ActionResult<IEnumerable<elevator>> GetInactiveElevators()
+        {
+            var inactiveElevators = _context.elevators.Where(e => (e.status != "active")).ToList();
+            if (inactiveElevators == null)
+            {
+                return NotFound();
+            }           
+            return inactiveElevators;
+        }
+        
         [HttpGet("{id}/status")]
         public ActionResult<string> GetElevatorsStatus(int id)
         {
@@ -43,23 +55,14 @@ namespace restapi.Controllers
            }
            return elevatorStatus;
         }
-
-
-//-------------------------------------------- TEST --------------------------------------------------
-        [HttpGet("inactive")]
-        public ActionResult<IEnumerable<elevator>> GetInactiveElevators()
-        {
-            var inactiveElevators = _context.elevators.Where(e => (e.status != "active")).ToList();
-
-            
-            if (inactiveElevators == null)
-            {
-                return NotFound();
-            }
-            
-            return inactiveElevators;
-        }
-        
+      
+        [HttpPut("{id}/status")]
+        public string PutStatus(int id,[FromBody] string status)
+        {            
+            var elevator = _context.elevators.Find(id);
+            elevator.status = status;
+            _context.SaveChanges();
+            return "Status changed to : '" + status + "' on elevator ID : " + id ;
+        }    
     }
-
 }
