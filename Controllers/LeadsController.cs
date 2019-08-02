@@ -37,7 +37,7 @@ namespace restapi.Controllers
         {
             var leadsNotCustomers = new List<lead>();
             DateTime nowMinus30Days = DateTime.Now.AddDays(-30);
-            var recentLeads =_context.leads.Where(l => l.creation_date > nowMinus30Days);
+            var recentLeads =_context.leads.Where(l => l.creation_date >= nowMinus30Days);
 
             var leadIsNotCustomers =
                             from l in recentLeads
