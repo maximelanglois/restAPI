@@ -14,6 +14,7 @@ namespace restapi.Models
         public DbSet<customer> customers {get; set;}
         public DbSet<elevator> elevators {get; set;}
         public DbSet<lead> leads {get; set;}
+        public DbSet<intervention> interventions {get; set;}
 
 
     }
