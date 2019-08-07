@@ -62,7 +62,8 @@ namespace restapi.Controllers
             var elevator = _context.elevators.Find(id);
             elevator.status = status;
             _context.SaveChanges();
-            return "Status changed to : '" + status + "' on elevator ID : " + id ;
-        }    
+           // return "Status changed to : '" + status + "' on elevator ID : " + id ;
+              return "hello";
+        } 
     }
 }
