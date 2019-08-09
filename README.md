@@ -32,3 +32,10 @@ GET /api/buildings/intervention
 **how to get leads created in the last 30 days and that they are not a customer**
 
 GET /api/leads/30days
+
+------------------------------------  INTERVENTION SECTION  ---------------------------------------
+
+GET /api/interventions/pending
+GET /api/interventions/{id}/status
+PUT /api/interventions/{id}/inprogress
+PUT /api/interventions/{id}/completed
