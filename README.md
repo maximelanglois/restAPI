@@ -1,32 +1,34 @@
 # restAPI
 
+PATH SOURCE = https://maxrestapi.azurewebsites.net
+
 
 **how to get /or/ modify a battery status**
 
-GET https://maxwillmathrestapi.azurewebsites.net/api/batteries/{id}/status
-PUT https://maxwillmathrestapi.azurewebsites.net/api/batteries/{id}/status
+GET /api/batteries/{id}/status
+PUT /api/batteries/{id}/status
 
 **how to get /or/ modify a column status**
 
-GET https://maxwillmathrestapi.azurewebsites.net/api/columns/{id}/status
-PUT https://maxwillmathrestapi.azurewebsites.net/api/columns/{id}/status
+GET /api/columns/{id}/status
+PUT /api/columns/{id}/status
 
 
 **how to get /or/ modify a elevator status**
 
-GET https://maxwillmathrestapi.azurewebsites.net/api/elevators/{id}/status
-PUT https://maxwillmathrestapi.azurewebsites.net/api/elevators/{id}/status
+GET /api/elevators/{id}/status
+PUT /api/elevators/{id}/status
 
 
 **how to get inactive elevators list**
 
-GET https://maxwillmathrestapi.azurewebsites.net/api/elevators/inactive
+GET /api/elevators/inactive
 
 
 **how to get buildings list where a intervention is required on its batterys or its columns or its elevators**
 
-GET https://maxwillmathrestapi.azurewebsites.net/api/buildings/intervention
+GET /api/buildings/intervention
 
 **how to get leads created in the last 30 days and that they are not a customer**
 
-GET https://maxwillmathrestapi.azurewebsites.net/api/leads/30days
+GET /api/leads/30days
