@@ -36,6 +36,9 @@ GET /api/leads/30days
 ------------------------------------  INTERVENTION SECTION  ---------------------------------------
 
 GET /api/interventions/pending
+
 GET /api/interventions/{id}/status
+
 PUT /api/interventions/{id}/inprogress
+
 PUT /api/interventions/{id}/completed
